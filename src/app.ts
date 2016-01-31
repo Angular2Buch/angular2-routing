@@ -1,4 +1,7 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {DashboardApp} from './app/dashboard-app';
+import {HTTP_PROVIDERS} from 'angular2/http';
 
-bootstrap(DashboardApp);
+import {DashboardApp} from './app/dashboard-app';
+import GasService from './app/services/gas-service';
+
+bootstrap(DashboardApp, [HTTP_PROVIDERS, GasService]);

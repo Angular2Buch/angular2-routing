@@ -2,12 +2,14 @@ import { Component, View } from 'angular2/core';
 
 import CarComponent from './components/car-component/car-component';
 import Car from './models/car';
-import GasService from './models/gas-service';
+import GasService from './services/gas-service';
 
-@Component({selector: 'dashboard'})
+@Component({
+  selector: 'dashboard-app'
+})
 @View({
   directives: [CarComponent],
-  templateUrl: 'app/components/dashboard-app.tpl.html'
+  templateUrl: 'app/dashboard-app.tpl.html'
 })
 export class DashboardApp {
   cars: Array<Car>;
