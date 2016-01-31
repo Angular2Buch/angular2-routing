@@ -2,15 +2,17 @@
 <html>
 
 <head>
-  <title>Forms Validation</title>
-  <base href=".">
-  
+  <title>Cars Dashboard: Routing</title>
+  <base href="/">
+
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
-  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
   <script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
   <script src="vendor/systemjs/dist/system.src.js"></script>
   <script src="vendor/rxjs/bundles/Rx.js"></script>
   <script src="vendor/angular2/bundles/angular2.dev.js"></script>
+  <script src="vendor/angular2/bundles/http.dev.js"></script>
   {{content-for 'head'}}
   <script>
     System.config({
@@ -21,13 +23,15 @@
         }
       }
     });
-    System.import('app.js').then(null, console.error.bind(console));
+      System.import('app.js').then(null, console.error.bind(console));
   </script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
 </head>
+  <body class="container">
 
-<body class="container">
-  <forms-app>Loading...</forms-app>
-</body>
+    <h1>Cars dashboard</h1>
+    <hr>
+    <dashboard-app>Loading...</dashboard-app>
 
+  </body>
 </html>

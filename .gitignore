@@ -1,16 +1,17 @@
 .DS_Store
 Thumbs.db
+npm-debug.log
+.idea/
 
+# compiled output
 dist/
 tmp/
+
+# dependencies
 node_modules/
 jspm_packages/
 bower_components/
-npm-debug.log
 
-/text/angular-module/index.html
-/text/angular-forms/index.html
-/index.html
-/lib/angular-latest-bundle/
-/lib/angular-latest-commonjs/
-/lib/angular-latest-typings/
+# transpiled .js
+/src/**/*.js
+/src/**/*.map

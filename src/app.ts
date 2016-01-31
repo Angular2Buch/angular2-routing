@@ -1,4 +1,4 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {FormsApp} from './app/forms';
+import {DashboardApp} from './app/dashboard-app';
 
-bootstrap(FormsApp);
+bootstrap(DashboardApp);
