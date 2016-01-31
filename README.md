@@ -1,11 +1,9 @@
 ![Screenshot](shield-with-beta.png)
 
-# Formularverarbeitung und Validierung -- Beispiele
+# Angular2 Routing -- Beispiele
 
-Beispiele für die Verarbeitung von Formularen und Validierung mit Angular2.  
+Beispiele für das Routing mit Angular2.  
 In diesem Verzeichnis finden Sie das im Artikel gezeigte Beispiel unter `src/`.
-
-![Screenshot](screenshot.png)
 
 ## Setup & Start
 
@@ -24,5 +22,5 @@ Der Befehl `ng serve` ist Teil der [Angular-CLI](https://github.com/angular/angu
 * [Teil 1 – Modularer Code mit SystemJS und jspm](https://github.com/Angular2Buch/angular2-module)
 * [Teil 2 – Templatesyntax und Web Components](https://github.com/Angular2Buch/angular2-template-syntax)
 * [Teil 3 – Dependency Injection und Unit-Testing](https://github.com/Angular2Buch/angular2-testing)
-* __[Teil 4 – Formularverarbeitung und Validierung](https://github.com/Angular2Buch/angular2-forms)__
-* [Teil 5 – Routing](https://github.com/Angular2Buch/angular2-routing) 
+* [Teil 4 – Formularverarbeitung und Validierung](https://github.com/Angular2Buch/angular2-forms)
+* __[Teil 5 – Routing](https://github.com/Angular2Buch/angular2-routing)__ 
