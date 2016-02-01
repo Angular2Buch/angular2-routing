@@ -1,9 +1,8 @@
-import { Component, View } from 'angular2/core';
-
-import CarComponent from '../car-component/car-component';
-import Car from '../../models/car';
-import GasService from '../../services/gas-service';
-import CarService from '../../services/car-service';
+import {Component, View} from 'angular2/core';
+import {CarComponent} from '../car-component/car-component';
+import {Car} from '../../models/car';
+import {GasService} from '../../services/gas-service';
+import {CarService} from '../../services/car-service';
 
 @Component({
   selector: 'car-list'

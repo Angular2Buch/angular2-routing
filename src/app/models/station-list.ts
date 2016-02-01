@@ -1,4 +1,4 @@
-import Station from './station';
+import {Station} from './station';
 
 export default class StationList {
 

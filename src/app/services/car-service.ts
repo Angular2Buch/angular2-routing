@@ -1,17 +1,23 @@
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
-import Car from '../models/car'
+import {Car} from '../models/car'
+import {Driver} from '../models/driver'
 
 @Injectable()
-export default class CarService {
+export class CarService {
 
   private cars: Car[];
 
   constructor() {
     this.cars = [
-      new Car('ng-car 1.0'),
-      new Car('ng-car 2.0')
+      new Car('ng-car1'),
+      new Car('ng-car2')
     ];
+  }
+
+  changeDriver(driver: Driver, forCarId:string) {
+    var car = this.cars.find(c => c.id == forCarId);
+    car.driver = driver;
   }
 
   getCars(): Car[] {

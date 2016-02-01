@@ -1,4 +1,4 @@
-export default class Station {
+export class Station {
 
   // Name
   name: string;

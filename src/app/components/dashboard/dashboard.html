@@ -1,13 +1,13 @@
 <div class="row">
   <template [ngIf]="totalDamages > 0">
     <div class="col-md-4">
-      <p class="lead">Reported Damages <span class="badge">{{ totalDamages }}</span></p>
+      <p class="lead">Gemeldete Schäden <span class="badge">{{ totalDamages }}</span></p>
     </div>
   </template>
 
   <template [ngIf]="bestPrice > 0">
     <div class="col-md-4">
-      <p class="lead">Best Oil Price <span class="badge">{{ bestPrice }} €</span></p>
+      <p class="lead">Bester Benzinpreis <span class="badge">{{ bestPrice }} €</span></p>
     </div>
   </template>
 </div>
@@ -26,7 +26,7 @@
           (click)="refillTank(c, money.value)"
           [disabled]="c == null"
           class="btn btn-primary form-control">
-          &#9981; Refill for
+          &#9981; Auftanken für 
         </button>
 
         <input #money value="100" class="form-control" placeholder="amount to spend" style="width: 50px">

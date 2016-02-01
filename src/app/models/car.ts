@@ -1,12 +1,17 @@
-export default class Car {
+import {Driver} from './driver';
+
+export class Car {
 
   id: string;
-  driver: string = '';
+  driver: Driver;
   tankCapacity: number = 100;
   hasDamage: boolean = false;
 
   constructor(id: string) {
     this.id = id;
+
+    var noDriver =  new Driver('', 'kein', 'Fahrer', '', '');
+    this.driver = noDriver;
     setInterval(() => this.reduceTankCapacity(), 1000);
   }
 

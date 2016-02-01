@@ -1,4 +1,4 @@
-<h2>Neuen Fahrer registrieren</h2>
+<h3>Fahrer registrieren für Auto {{ forCarId }}</h3>
 
 <form [ngFormModel]="driverForm"
       [hidden]="submitted"
@@ -96,5 +96,8 @@
 <div [hidden]="!submitted">
   Der Fahrer {{ driver.firstName }} {{ driver.lastName }} (gebohren am {{ driver.birthdate }}) wurde erfolgreich registriert.
   <br>
-  Er tritt für als {{driver.type}}-Fahrer an.
+  Er tritt für uns als <b>{{driver.type}}</b>-Fahrer an.<br>
+  <br>
+
+  <a class="btn btn-success" [routerLink]="['/Dashboard']">Zurück</a>
 </div>

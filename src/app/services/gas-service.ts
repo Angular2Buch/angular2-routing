@@ -1,10 +1,10 @@
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
-import Station from '../models/Station';
+import {Station} from '../models/station';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export default class GasService {
+export class GasService {
 
   apiUrl: string = 'https://creativecommons.tankerkoenig.de/json/list.php?lat=49.41&lng=8.7&rad=4&sort=price&type=diesel';
 
