@@ -5,17 +5,20 @@
 Beispiele für das Routing mit Angular2.  
 In diesem Verzeichnis finden Sie das im Artikel gezeigte Beispiel unter `src/`.
 
+![Screenshot](screenshot.png)
+
 ## Setup & Start
 
 Alle gezeigten Kommandozeilen-Befehle setzen voraus, dass [Node.js](https://nodejs.org/) installiert ist.
 
 ```cmd
-npm install -g angular-cli
 npm install
-ng serve
+npm start
 ```
 
+Der Befehl `npm start` ruft `ng serve` auf.
 Der Befehl `ng serve` ist Teil der [Angular-CLI](https://github.com/angular/angular-cli) und startet die Anwendung unter `http://localhost:4200`. 
+Für ein vereinfachtes Debugging können Sie das Kommandozeilen-Tool mit `npm install -g angular-cli` global installieren.
 
 ## Alle Beispiele der Fachartikelreihe
 

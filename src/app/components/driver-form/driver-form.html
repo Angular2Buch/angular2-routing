@@ -21,6 +21,11 @@
 
     <div class="alert alert-danger"
          *ngIf="!driverId.control.valid && !driverId.control.pending">
+
+         <p *ngIf="driverId.control.errors.required">
+            Geben Sie eine Id an.
+         </p>
+
       <p *ngIf="driverId.control.errors.uniqueId">
           Diese Id exisitert bereist.
       </p>
@@ -69,7 +74,7 @@
 
       <div class="alert alert-danger"
            *ngIf="birthdate.control.dirty && !birthdate.control.valid && birthdate.control.errors.germanDate">
-          Geben Sie ein Datum ein.
+          Geben Sie ein Datum im deutschen Format ein.<br>
           Beispiel: 01.01.1970
       </div>
 

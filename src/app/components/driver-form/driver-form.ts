@@ -25,7 +25,7 @@ export class DriverForm {
     this.driver = carService.getCar(this.forCarId).driver || new Driver('', '', '', '')
 
     this.driverForm = fb.group({
-      id:        ['', Validators.required, IdValidator.uniqueId],
+      id:        ['', Validators.required, IdValidator.uniqueId(carService)],
       firstName: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
       lastName:  ['', Validators.required],
       birthdate: ['', DateValidator.germanDate],
