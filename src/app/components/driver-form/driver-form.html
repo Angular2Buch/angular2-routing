@@ -91,6 +91,8 @@
  <button type="submit"
          class="btn btn-primary"
          [disabled]="!driverForm.valid">Fahrer registrieren</button>
+
+  <a class="btn btn-default" [routerLink]="['/Dashboard']">Zurück</a>
 </form>
 
 <div [hidden]="!submitted">

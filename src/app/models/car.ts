@@ -9,9 +9,6 @@ export class Car {
 
   constructor(id: string) {
     this.id = id;
-
-    var noDriver =  new Driver('', 'kein', 'Fahrer', '', '');
-    this.driver = noDriver;
     setInterval(() => this.reduceTankCapacity(), 1000);
   }
 

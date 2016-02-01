@@ -14,15 +14,15 @@ import {CarService} from '../../services/car-service';
 })
 export class DriverForm {
   driverForm: ControlGroup;
-
   types = ['Formel 1', 'Stock Car Rennen', 'Rallye', 'Kartsport'];
-  driver = new Driver('MS', 'Nico', 'Rossberg', '27.07.1985');
+  driver: Driver;
   submitted = false;
   forCarId: string;
 
   constructor(private fb: FormBuilder, private routeParams: RouteParams, private carService: CarService) {
 
     this.forCarId = routeParams.get('forCarId');
+    this.driver = carService.getCar(this.forCarId).driver || new Driver('', '', '', '')
 
     this.driverForm = fb.group({
       id:        ['', Validators.required, IdValidator.uniqueId],
@@ -37,6 +37,4 @@ export class DriverForm {
     this.carService.changeDriver(this.driver, this.forCarId);
     this.submitted = true;
   }
-
-  get diagnostic() { return JSON.stringify(this.driverForm.value); }
 }

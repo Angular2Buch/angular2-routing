@@ -14,9 +14,12 @@
       <td>{{ model?.tankCapacity | number:'1.2-2' }} liter</td>
     </tr>
     <tr>
-      <td>Fahrer {{ model?.driver.name }}</td>
+      <td>Fahrer</td>
       <td>
-        <a class="btn btn-primary" [routerLink]="['/Drivers', 'Create', { forCarId: model?.id }]">Ändern</a>
+        <a *ngIf="model.driver" [routerLink]="['/Drivers', 'Details', { forCarId: model?.id }]">{{ model?.driver?.firstName }} {{ model?.driver?.lastName }}</a>
+        <i *ngIf="!model.driver">nicht registriert</i>
+        &nbsp;
+        <a class="btn btn-sm btn-default" [routerLink]="['/Drivers', 'Create', { forCarId: model?.id }]">ändern</a>
       </td>
     </tr>
     <tr>
