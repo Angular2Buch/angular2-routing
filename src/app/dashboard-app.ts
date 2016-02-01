@@ -1,39 +1,16 @@
-import { Component, View } from 'angular2/core';
+import {Component} from 'angular2/core';
+import {ROUTER_DIRECTIVES, RouterOutlet, RouteConfig} from 'angular2/router';
 
-import CarComponent from './components/car-component/car-component';
-import Car from './models/car';
-import GasService from './services/gas-service';
-import CarService from './services/car-service';
+import {Dashboard} from './components/dashboard/dashboard';
+import {Drivers} from './components/drivers/drivers';
 
+@RouteConfig([
+    { path: '/dashboard', as: 'Dashboard', component: Dashboard, useAsDefault: true },
+    { path: '/drivers/...', as: 'Drivers', component: Drivers }
+])
 @Component({
-  selector: 'dashboard-app'
+  selector: 'dashboard-app',
+  templateUrl: 'app/dashboard-app.html',
+  directives: [ROUTER_DIRECTIVES]
 })
-@View({
-  directives: [CarComponent],
-  templateUrl: 'app/dashboard-app.html'
-})
-export class DashboardApp {
-  cars: Car[];
-  totalDamages: number = 0;
-  bestPrice: number = 0;
-
-  constructor(private gasService: GasService, private carService: CarService) {
-    this.cars = carService.getCars();
-  }
-
-  refillTank(car: Car, amountOfMoneyToSpend: number) {
-
-    this.gasService
-      .getBestPrice()
-      .subscribe((bestPrice: number) => {
-
-        this.bestPrice = bestPrice;
-        car.refillTank(amountOfMoneyToSpend / bestPrice);
-      },
-      err => console.error(err));
-  }
-
-  notifyCarDamaged() {
-    this.totalDamages++;
-  }
-}
+export class DashboardApp { }
