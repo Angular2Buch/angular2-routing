@@ -1,11 +1,11 @@
 import {Component, View} from 'angular2/core';
-import {ROUTER_DIRECTIVES, RouterOutlet, RouteConfig} from 'angular2/router';
+import {ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 import {DriverForm} from '../driver-form/driver-form';
 import {DriverDetails} from '../driver-details/driver-details';
 
 @Component({})
 @View({
-  directives: [RouterOutlet],
+  directives: [ROUTER_DIRECTIVES],
   template: '<router-outlet></router-outlet>'
 })
 @RouteConfig([
