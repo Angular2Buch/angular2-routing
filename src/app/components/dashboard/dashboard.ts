@@ -4,9 +4,7 @@ import {Car} from '../../models/car';
 import {GasService} from '../../services/gas-service';
 import {CarService} from '../../services/car-service';
 
-@Component({
-  selector: 'car-list'
-})
+@Component({})
 @View({
   directives: [CarComponent],
   templateUrl: 'app/components/dashboard/dashboard.html'

@@ -4,7 +4,6 @@ import {Driver} from '../../models/driver';
 import {CarService} from '../../services/car-service';
 
 @Component({
-  selector: 'driver-details',
   directives: [ROUTER_DIRECTIVES],
   templateUrl: 'app/components/driver-details/driver-details.html',
   styleUrls:  ['app/components/driver-details/driver-details.css'],

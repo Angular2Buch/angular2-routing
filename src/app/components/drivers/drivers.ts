@@ -3,9 +3,7 @@ import {ROUTER_DIRECTIVES, RouterOutlet, RouteConfig} from 'angular2/router';
 import {DriverForm} from '../driver-form/driver-form';
 import {DriverDetails} from '../driver-details/driver-details';
 
-@Component({
-  selector: 'drivers'
-})
+@Component({})
 @View({
   directives: [RouterOutlet],
   template: '<router-outlet></router-outlet>'

@@ -7,7 +7,6 @@ import {Driver} from '../../models/driver';
 import {CarService} from '../../services/car-service';
 
 @Component({
-  selector: 'driver-form',
   directives: [ROUTER_DIRECTIVES],
   templateUrl: 'app/components/driver-form/driver-form.html',
   styleUrls:  ['app/components/driver-form/driver-form.css'],
