@@ -12,7 +12,7 @@ export class DriverDetails {
   private driver: Driver;
   private forCarId: string;
 
-  constructor(private routeParams: RouteParams, private carService: CarService) {
+  constructor(routeParams: RouteParams, carService: CarService) {
     this.forCarId = routeParams.get('forCarId');
     var car = carService.getCar(this.forCarId);
     this.driver = car.driver;
